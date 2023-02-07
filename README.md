@@ -1,5 +1,5 @@
 # <p align="center">GitBase</p>
-> This is a node package that provides **CRUD** functionality to files on your **GitHub** account such that you can use it as a **Cloud Hosted Database** for **Free**
+> This is a node package created by [**Manwil Bahaa Zaki**](https://www.linkedin.com/in/manwil-bahaa-zaki-kouzman-519701202/) that provides **CRUD** functionality to files on your **GitHub** account such that you can use it as a **Cloud Hosted Database** for **Free**
 
 ## <p align="center">Steps to setup your github for GitBase</p>
 - **Login** your github account
@@ -49,7 +49,7 @@ const gitbase = require('@manwil-zaki/gitbase')
     - **git_update(base , path , key , data)**
     - **git_delete(base , path , key)**
 
-### **git_read**
+### - **git_read**
 takes parameters **base**,**path**,**key**
 ```ruby
 async function getFILE(){
@@ -59,4 +59,36 @@ async function getFILE(){
 gitFILE()
 ```
 
+### - **git_create**
+takes parameters **base**,**path**,**key** ,**data** (string)
+```ruby
+async function createFILE(){
+    let created = await gitbase.git_create(base,path,key,'Hello world')
 
+    #for json use JSON.stringify() to convert json to string
+    console.log('STATUS : ',created)
+}
+createFILE()
+```
+
+### - **git_update**
+takes parameters **base**,**path**,**key** ,**data** (string)
+```ruby
+async function updateFILE(){
+    let updated = await gitbase.git_update(base,path,key,'Updated file content')
+
+    #for json use JSON.stringify() to convert json to string
+    console.log('STATUS : ',updated)
+}
+updateFILE()
+```
+
+### - **git_delete**
+takes parameters **base**,**path**,**key** 
+```ruby
+async function deleteFILE(){
+    let deleted = await gitbase.git_delete(base,path,key)
+    console.log('STATUS : ',deleted)
+}
+deleteFILE()
+```
