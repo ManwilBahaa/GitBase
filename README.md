@@ -1,5 +1,5 @@
 # <p align="center">GitBase</p>
-> This is a node package created by [**Manwil Bahaa Zaki**](https://www.linkedin.com/in/manwil-bahaa-zaki-kouzman-519701202/) that provides **CRUD** functionality to files on your **GitHub** account such that you can use it as a **Cloud Hosted Database** for **Free**
+> This is a node package created by [**Manwil Bahaa Zaki**](https://www.linkedin.com/in/manwil-bahaa-zaki-kouzman-519701202/) that provides **CRUD** functionality to files on your **GitHub** account such that you can use it as a **Cloud Hosted Storage bucket** to save all your files for **Free**
 
 ## <p align="center">Steps to setup your github for GitBase</p>
 - **Login** your github account
@@ -27,7 +27,7 @@ const gitbase = require('@manwil-zaki/gitbase')
 ```
 
 - next we need to define some constants
-    - first you need to create a repositor **manually** . this will be the root of your database
+    - first you need to create a repositor **manually** . this will be the root of your bucket
     ```ruby
     let base = "https://api.github.com/repos/{github username}/{repo name}/contents/"
     ```
