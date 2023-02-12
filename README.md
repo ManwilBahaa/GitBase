@@ -27,7 +27,7 @@ const gitbase = require('@manwil-zaki/gitbase')
 ```
 
 - next we need to define some constants
-    - first you need to create a repositor **manually** . this will be the root of your bucket
+    - first you need to create a repositor using **git_create_new_repo( key , repo_name )** . this will be the root of your bucket
     ```ruby
     let base = "https://api.github.com/repos/{github username}/{repo name}/contents/"
     ```
